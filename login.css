@@ -1,0 +1,208 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", serif; 
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f293d;
+    height: 100vh;
+  }
+  
+  .container {
+    .container {
+      position: relative;
+      width: 50%;
+      max-width: 600px;
+      padding: 20px;
+      background-color: #1f293d;
+      border: 2px solid rgba(0, 238, 255, 0.782);
+      border-radius: 10px;
+      margin-bottom: 20px; 
+    }    position: relative;
+    width: 400px;
+    padding: 20px;
+    background-color: #213254;
+    border: 2px solid #0ef;
+    border-radius: 10px;
+  }
+
+  .container2 {
+    position: relative;
+    width: 90%;
+    max-width: 1000px; /* Ajusta el ancho máximo */
+    padding: 20px;
+    background-color: #1f293d;
+    border: 2px solid #0ef;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Espacio entre formularios y tablas */
+  }
+
+  .input-box input[type="date"] {
+    text-align: center;
+    margin: 0 auto;
+    display: block; 
+}
+  
+  .login-box {
+    position: relative;
+  }
+  
+  .login-box h1 {
+    font-size: 2em;
+    color: #0ef;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .input-box {
+    position: relative;
+    margin: 25px 0;
+  }
+  
+  .input-box input {
+    width: 100%;
+    height: 35px;
+    background: transparent;
+    border: 2px solid #515f7b;
+    outline: none;
+    border-radius: 40px;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 20px;
+    transition: 0.5s ease;
+  }
+  
+  .input-box input:focus,
+  .input-box input:focus {
+    border-color: #0ef;
+  }
+  
+  .input-box label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    pointer-events: none;
+    transition: 0.5s ease;
+    color: rgb(64, 152, 160);
+  }
+  
+  .input-box input:focus ~ label,
+  .input-box input:valid ~ label {
+    top: 1px;
+    font-size: 0.8em;
+    background: #1f293d;
+    padding: 0 6px;
+    color: #0ef;
+  }
+  .login-box2 {
+    position: relative;
+  }
+  
+  .login-box2 h1 {
+    font-size: 2em;
+    color: #0ef;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  
+  .btn {
+    cursor: pointer;
+    display: inline-block;
+    width: auto; 
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    color: #0ef;
+    background: #1f293d;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #0ef;
+    border-radius: 30px;
+    padding: 5px 30px;
+    z-index: 1;
+    overflow: hidden;
+    transition: color 1s, box-shadow 1s;
+    margin-bottom: 10px;
+  }
+  
+  .btn:hover {
+    transition-delay: 0s, 1s;
+    color: white;
+    box-shadow: 0 0 10px #0ef, 0 0 20px #0ef, 0 0 40px #0ef, 0 0 80px #0ef, 0 0 160px #0ef;
+  }
+  
+  .btn:hover::before {
+    width: 50%;
+  }
+
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  table th, table td {
+    padding: 12px;
+    text-align: center; /* Centra el contenido de las celdas */
+    border-bottom: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #b8eff8;
+    color: #0d0d0d;
+    font-weight: bold;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #554848c0;
+  }
+  
+  table tr:hover {
+    background-color: #7da0b5;
+  }
+  
+  
+  table td a {
+    margin-right: 10px;
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  table td a:hover {
+    text-decoration: underline;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+ 
+  form {
+    margin-top: 20px;
+  }
+  
+  form input, form select {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Usuarios</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="login-box">
+            <h1>Registro de Usuario</h1>
+            
+            <form action="crear_usuario.php" method="post">
+                
+                <div class="input-box">
+                    <input type="Cédula" required>
+                    <label for=""> Cédula</label>
+                </div>
+                <div class="input-box">
+                    <input type="Nombres" required>
+                    <label for="">Nombres</label>
+                </div>
+    
+                <div class="input-box">
+                    <input type="Rol" required>
+                    <label for="">Rol</label>
+                </div>
+    
+                <div class="input-box">
+                    <input type="Correo" required>
+                    <label for="">Correo</label>
+                </div>
+    
+                <div class="input-box">
+                    <input type="Télefono" required>
+                    <label for="">Télefono</label>
+                </div>
+    
+                <div class="input-box">
+                    <input type="date" required>
+                    <label for="">Fecha</label>
+                </div>
+
+                <button type="submit" class="btn">Guardar</button> 
+            </form>
+        </div>
+    </div>
+
+    
+
+    <div class="container2">
+        <div class="login-box2"> 
+        <h1>Lista de Usuarios</h1>
+        <form action="Guardar_usuario.php" method="post">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Cédula</th>
+                    <th>Nombres</th>
+                    <th>Rol</th>
+                    <th>Correo</th>
+                    <th>Teléfono</th>
+                    <th>Fecha</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+                    <tr>
+                        <td><?php echo $row['Cédula']; ?></td>
+                        <td><?php echo $row['Nombres']; ?></td>
+                        <td><?php echo $row['Rol']; ?></td>
+                        <td><?php echo $row['Correo']; ?></td>
+                        <td><?php echo $row['Télefono']; ?></td>
+                        <td><?php echo $row['Fecha']; ?></td>
+                        <td>
+                            <a href="editar_usuario.php?id=<?php echo $row['id']; ?>">Editar</a>
+                            <a href="eliminar_usuario.php?id=<?php echo $row['id']; ?>">Eliminar</a>
+                        </td>
+                    </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+    </form>
+        </div>
+    </div>
+</body>
+</html>
